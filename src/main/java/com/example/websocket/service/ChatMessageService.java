@@ -14,15 +14,7 @@ public class ChatMessageService {
 
     @Transactional
     public ChatMessage saveMessage(ChatMessage chatMessage) {
-        try {
-            System.out.println("Saving message to DB: " + chatMessage);
-            ChatMessage saved = chatMessageRepository.save(chatMessage);
-            System.out.println("Saved to DB: " + saved);
-            return saved;
-        } catch (Exception e) {
-            System.err.println("Error saving message: " + e.getMessage());
-            e.printStackTrace();
-            throw e;
-        }
+        // Logic lưu vào DB
+        return chatMessageRepository.save(chatMessage);
     }
 }
